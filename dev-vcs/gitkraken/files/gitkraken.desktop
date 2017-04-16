@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gitkraken
+Type=Application
+Comment=GitKraken is the Git client designed to make you a more productive Git use.
+Exec=gitkraken
+TryExec=gitkraken
+Icon=gitkraken
+Categories=Development;IDE
