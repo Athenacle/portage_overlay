@@ -10,7 +10,7 @@ inherit distutils-r1 git-r3
 DESCRIPTION="Personal Python Library."
 HOMEPAGE="http://cgit.pi.slave.xyz"
 
-EGIT_REPO_URI="git@192.168.1.2:/home/git/sandisk/gits/py-wxc.git"
+EGIT_REPO_URI="git@192.168.1.2:/home/git/sandisk/gits/${PN}.git"
 EGIT_BRANCH="master"
 EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
 
