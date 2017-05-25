@@ -5,7 +5,7 @@ EAPI=6
 
 PYTHON_COMPAT=( python3_{4,5,6} pypy )
 
-inherit distutils-r1 git-r3
+   inherit distutils-r1 git-r3
 
 DESCRIPTION="Personal Python Library."
 HOMEPAGE="http://cgit.pi.slave.xyz"
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+DEPEND="
+dev-python/setuptools[${PYTHON_USEDEP}]"
 RDEPEND=""
 
 src_unpack(){
