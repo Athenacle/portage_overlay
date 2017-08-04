@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Postman
+Type=Application
+Comment=Postman is the most complete API Development Environment.
+Exec=Postman %F
+TryExec=Postman
+Icon=postman-icon
+Categories=Development;IDE;
