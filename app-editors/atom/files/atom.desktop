@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Atom
+Type=Application
+Comment=A Hackable Text Editor for the 21st Century
+Exec=/opt/athenacle/atom/atom %F
+TryExec=atom
+Icon=/opt/athenacle/atom/atom.png
+Categories=Development;
