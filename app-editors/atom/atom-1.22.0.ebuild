@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io"
-SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/atom-amd64.tar.gz" 
+SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/atom-amd64.tar.gz -> atom-amd64-${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
