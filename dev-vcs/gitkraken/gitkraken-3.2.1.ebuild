@@ -17,6 +17,7 @@ IUSE=""
 
 DEPEND="
 	>=gnome-base/gconf-2.0
+	gnome-base/libgnome-keyring
 	x11-libs/gtk+:2
 	virtual/libudev
 	dev-libs/libgcrypt:*
