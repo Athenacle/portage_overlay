@@ -8,7 +8,7 @@ inherit eutils
 DESCRIPTION="Multiplatform Editor Visual Studio Code from Microsoft"
 HOMEPAGE="https://code.visualstudio.com"
 SRC_URI="
-	amd64? (  https://vscode-update.azurewebsites.net/latest/linux-x64/stable -> ${P}-amd64.tar.gz )
+	amd64? (  https://go.microsoft.com/fwlink/?LinkID=620884 -> ${P}-amd64-${PV}.tar.gz )
 	"
 RESTRICT="mirror"
 
@@ -26,14 +26,9 @@ DEPEND="
 
 RDEPEND="${DEPEND}"
 
-ARCH="$(uname -m)"
 
 src_unpack(){
-	if [[ $ARCH == "x86_64" ]];then
-		S="${WORKDIR}/VSCode-linux-x64"
-	else
-		die "This ebuild does not support the arch $ARCH. DIE..."
-	fi
+	S="${WORKDIR}/VSCode-linux-x64"
 	default
 }
 
