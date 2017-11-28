@@ -30,18 +30,7 @@ DEPEND="
 "
 
 RDEPEND="${DEPEND}"
-
-ARCH="$(uname -m)"
-
-src_unpack(){
-	if [[ $ARCH != "x86_64" ]];then
-		eerror "Machine arch is not x86_64."
-		die
-	else
-		unpack ${A}
-		S="${WORKDIR}/${PN}"
-	fi
-}
+S="${WORKDIR}/${PN}"
 
 src_install(){
 	insinto "/opt/athenacle/${PN}"
