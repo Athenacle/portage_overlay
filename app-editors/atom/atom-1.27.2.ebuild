@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -7,6 +7,8 @@ inherit eutils
 DESCRIPTION="A hackable text editor for the 21st Century"
 HOMEPAGE="https://atom.io"
 SRC_URI="https://github.com/atom/atom/releases/download/v${PV}/atom-amd64.tar.gz -> atom-amd64-${PV}.tar.gz"
+
+RESTRICT="mirror"
 
 LICENSE="MIT"
 SLOT="0"
