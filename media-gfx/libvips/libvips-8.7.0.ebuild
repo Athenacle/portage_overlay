@@ -3,17 +3,17 @@
 
 EAPI=6
 
-inherit eutils autotools
+inherit eutils 
 
 DESCRIPTION="A fast image processing library with low memory needs."
 HOMEPAGE="https://github.com/jcupitt/libvips"
-SRC_URI="https://github.com/jcupitt/libvips/releases/download/v${PV}/vips-${PV}.tar.gz"
+SRC_URI="https://github.com/jcupitt/libvips/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="LGPL-2.1+"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE="+X +imagemagick doc debug  +jpeg exif +gif svg tiff fftw +png graphicsmagick orc webp lcms openexr pdf cfitsio gsf"
 
-S="${WORKDIR}/vips-${PV}"
+S="${WORKDIR}/libvips-${PV}"
 
 RESTRICT=" mirror "
 
@@ -38,14 +38,16 @@ RDEPEND="
 	gsf? ( >=gnome-extra/libgs-1.14.26 )
 "
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		dev-libs/gobject-introspection
+		dev-util/gtk-doc"
 
 src_prepare(){
 	eapply_user
+	./autogen.sh
 }
 
 src_configure() {
-
 	local myconf=(
 		$(use_with cfitsio)
 		$(use_with tiff)
